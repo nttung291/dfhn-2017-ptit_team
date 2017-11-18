@@ -9,15 +9,13 @@ public class Table {
     private String floor;
     private String pricePerSeat;
     private int seatAmount;
-    private int status;
     private int tableNo;
 
-    public Table(String description, String floor, String pricePerSeat, int seatAmount, int status, int tableNo) {
+    public Table(String description, String floor, String pricePerSeat, int seatAmount, int tableNo) {
         this.description = description;
         this.floor = floor;
         this.pricePerSeat = pricePerSeat;
         this.seatAmount = seatAmount;
-        this.status = status;
         this.tableNo = tableNo;
     }
 
@@ -51,14 +49,6 @@ public class Table {
 
     public void setSeatAmount(int seatAmount) {
         this.seatAmount = seatAmount;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
     }
 
     public int getTableNo() {
