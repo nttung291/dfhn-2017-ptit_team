@@ -23,6 +23,7 @@
         <activity android:name=".BookTable"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".PaymentActivity"></activity>
+        <activity android:name=".ConfirmationActivity"></activity>
     </application>
 
 </manifest>
