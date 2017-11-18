@@ -2,6 +2,7 @@ package com.example.son.gdghack;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -16,7 +17,7 @@ import java.util.*;
 
 public class Booking extends AppCompatActivity {
 
-    Button btnChangeDate, btnChangeTime;
+    Button btnChangeDate, btnChangeTime, btnContinue;
     TextView txtDate, txtTime;
     Calendar cal;
     Date date, gio;
@@ -33,6 +34,14 @@ public class Booking extends AppCompatActivity {
     private void setupUI() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        btnContinue = findViewById(R.id.btnContinue);
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Booking.this, BookTable.class));
+            }
+        });
 
         btnChangeDate = (Button) findViewById(R.id.btnEditDate);
         txtDate = (TextView) findViewById(R.id.date);

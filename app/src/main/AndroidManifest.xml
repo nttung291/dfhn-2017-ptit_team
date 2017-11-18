@@ -20,6 +20,8 @@
         <activity android:name=".Booking"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".DeliveryNow"></activity>
+        <activity android:name=".BookTable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>
