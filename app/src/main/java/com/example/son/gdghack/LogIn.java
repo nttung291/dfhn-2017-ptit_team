@@ -1,5 +1,6 @@
 package com.example.son.gdghack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -51,7 +52,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(LogIn.this, "Success", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LogIn.this, Booking.class));
                         } else {
                             Toast.makeText(LogIn.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();

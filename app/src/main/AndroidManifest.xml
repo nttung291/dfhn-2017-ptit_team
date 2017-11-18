@@ -23,6 +23,9 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".ConfirmationActivity"></activity>
         <activity android:name=".PaymentActivity"></activity>
+        <activity android:name=".Booking"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
