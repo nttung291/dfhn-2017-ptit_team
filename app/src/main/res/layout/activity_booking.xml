@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.son.gdghack.Booking"
+    android:background="@android:color/holo_red_light"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingLeft="40dp">
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Xin chào, Hoàng Anh Phạm"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:textSize="15dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="DATE"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="17dp"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/date"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="1/1/2017"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="17dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnEditDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="edit"
+                android:textColor="@android:color/holo_red_light"/>
+        </LinearLayout>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="TIME"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="17dp"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/time"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="00:00:00"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="17dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnEditTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="edit"
+                android:textColor="@android:color/holo_red_light"/>
+        </LinearLayout>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="NUMBER OF GUESTS"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="17dp"/>
+        <EditText
+            android:id="@+id/numberGuest"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="17dp"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_red_light"
+        android:background="@color/white"
+        android:text="CONTINUE"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingLeft="50dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="PTIT_TEAM RES"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add: Km10, Nguyen Trai, Ha Dong, Ha Noi"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Mob: 0972999596"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Mail: ptit_team@gmail.com"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>
