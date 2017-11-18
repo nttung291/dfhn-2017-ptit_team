@@ -23,6 +23,8 @@ public class RVTableAdapter extends RecyclerView.Adapter<RVTableAdapter.TableVie
     private static final String TAG = "Amen";
     private Context context;
     private List<Table> tables;
+    public static ToggleButton preToggle;
+    public static Table preTable;
 
     class TableViewHolder extends RecyclerView.ViewHolder {
 
@@ -31,6 +33,16 @@ public class RVTableAdapter extends RecyclerView.Adapter<RVTableAdapter.TableVie
         public TableViewHolder(View itemView) {
             super(itemView);
             toggleButton = itemView.findViewById(R.id.toggle_bt);
+            toggleButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (preToggle != null) {
+                        preToggle.setChecked(false);
+                    }
+                    preToggle = toggleButton;
+                    preTable = findTable(Integer.parseInt(preToggle.getText().toString()));
+                }
+            });
         }
 
         public void setData(Table table) {
@@ -67,5 +79,11 @@ public class RVTableAdapter extends RecyclerView.Adapter<RVTableAdapter.TableVie
         return tables.size();
     }
 
+    public Table findTable(int number) {
+        for (Table table : tables) {
+            if (table.getTableNo() == number) return table;
+        }
+        return null;
+    }
 
 }
