@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_red_light"
-    tools:context="com.example.son.gdghack.DeliveryNow"
-    android:orientation="vertical">
+    tools:context="com.example.son.gdghack.DeliveryNow">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/DeliveryNow"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
 
     </android.support.v7.widget.RecyclerView>
 
     <Button
+        android:layout_alignParentBottom="true"
         android:id="@+id/btnContinue"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="CONTINUE"
         android:textColor="@android:color/holo_red_light"
         android:background="@color/white"
-        android:gravity="center"
-        android:layout_gravity="center"/>
-</LinearLayout>
+        android:layout_marginBottom="30dp"
+        />
+</RelativeLayout>
