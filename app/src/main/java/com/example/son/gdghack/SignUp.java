@@ -50,7 +50,6 @@ public class SignUp extends AppCompatActivity {
                 pass1 = tmp3.getText().toString();
                 if (!check ()) {
                     Toast.makeText(SignUp.this,  "Not allowed!" , Toast.LENGTH_SHORT).show();
-                    update();
                 }
                 else {
                     createAccount();
@@ -78,7 +77,6 @@ public class SignUp extends AppCompatActivity {
                             Toast.makeText(SignUp.this, "Success",
                                     Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
-                            update();
                             final Intent moveToLogIn = new Intent(SignUp.this, LogIn.class);
                             SignUp.this.startActivity(moveToLogIn);
 
@@ -94,28 +92,6 @@ public class SignUp extends AppCompatActivity {
                 });
     }
 
-    private void update(){
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
 
-        myRef.setValue("Hello, World!");
-        // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Toast.makeText(SignUp.this, "Success " + value , Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Toast.makeText(SignUp.this, "Failed", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
 }
