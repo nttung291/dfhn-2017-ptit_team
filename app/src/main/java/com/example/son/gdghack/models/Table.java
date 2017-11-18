@@ -7,18 +7,12 @@ package com.example.son.gdghack.models;
 public class Table {
     private String description;
     private String floor;
-    private String pricePerSeat;
+    private Long pricePerSeat;
     private int seatAmount;
-    private int status;
     private int tableNo;
+    private int status;
 
-    public Table(String description, String floor, String pricePerSeat, int seatAmount, int status, int tableNo) {
-        this.description = description;
-        this.floor = floor;
-        this.pricePerSeat = pricePerSeat;
-        this.seatAmount = seatAmount;
-        this.status = status;
-        this.tableNo = tableNo;
+    public Table() {
     }
 
     public String getDescription() {
@@ -37,11 +31,11 @@ public class Table {
         this.floor = floor;
     }
 
-    public String getPricePerSeat() {
+    public Long getPricePerSeat() {
         return pricePerSeat;
     }
 
-    public void setPricePerSeat(String pricePerSeat) {
+    public void setPricePerSeat(Long pricePerSeat) {
         this.pricePerSeat = pricePerSeat;
     }
 
@@ -53,19 +47,38 @@ public class Table {
         this.seatAmount = seatAmount;
     }
 
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
     public int getTableNo() {
         return tableNo;
     }
 
     public void setTableNo(int tableNo) {
         this.tableNo = tableNo;
+    }
+
+    public Table(String description, String floor, Long pricePerSeat, int seatAmount, int tableNo) {
+        this.description = description;
+        this.floor = floor;
+        this.pricePerSeat = pricePerSeat;
+        this.seatAmount = seatAmount;
+        this.tableNo = tableNo;
+    }
+
+    @Override
+    public String toString() {
+        return "Table{" +
+                "description='" + description + '\'' +
+                ", floor='" + floor + '\'' +
+                ", pricePerSeat=" + pricePerSeat +
+                ", seatAmount=" + seatAmount +
+                ", tableNo=" + tableNo +
+                '}';
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

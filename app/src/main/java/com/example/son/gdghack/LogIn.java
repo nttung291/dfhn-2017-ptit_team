@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.son.gdghack.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -17,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LogIn extends AppCompatActivity implements View.OnClickListener{
 
-    Button bnLogIn;
+    Button bnLogIn, bnSignup;
     EditText etUserName;
     EditText etPassword;
 
@@ -31,6 +33,18 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
         mAuth = FirebaseAuth.getInstance();
 
         setupUI();
+
+        bnSignup = (Button) findViewById(R.id.signup);
+
+        View.OnClickListener signupBtn = new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                final Intent moveToSignUp = new Intent(LogIn.this, LogIn.class);
+                LogIn.this.startActivity(moveToSignUp);
+            }
+        };
+        bnSignup.setOnClickListener(signupBtn);
     }
 
     private void setupUI() {
@@ -69,4 +83,6 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
                 break;
         }
     }
+
+
 }
