@@ -9,8 +9,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
+import com.example.son.gdghack.event.OnClickPickTime;
+import com.example.son.gdghack.models.Guest;
+import com.example.son.gdghack.models.User;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -22,6 +29,8 @@ public class Booking extends AppCompatActivity {
     Calendar cal;
     Date date, gio;
     Toolbar toolbar;
+    Guest guest;
+    EditText numberGuest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +43,14 @@ public class Booking extends AppCompatActivity {
     private void setupUI() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        numberGuest = findViewById(R.id.numberGuest);
         btnContinue = findViewById(R.id.btnContinue);
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                guest = new Guest(txtDate.getText().toString(),txtTime.getText().toString(),Integer.parseInt(numberGuest.getText().toString()));
                 startActivity(new Intent(Booking.this, BookTable.class));
+
             }
         });
 
