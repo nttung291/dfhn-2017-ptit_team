@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookTable extends AppCompatActivity {
-
     private static final String TAG = "Amen";
     private Toolbar mToolbar;
     private TextView tvAppBarTitle;
