@@ -24,6 +24,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".PaymentActivity"></activity>
         <activity android:name=".ConfirmationActivity"></activity>
+        <activity android:name=".SignUp"></activity>
     </application>
 
 </manifest>

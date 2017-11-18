@@ -40,7 +40,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
 
             @Override
             public void onClick(View view) {
-                final Intent moveToSignUp = new Intent(LogIn.this, LogIn.class);
+                final Intent moveToSignUp = new Intent(LogIn.this, SignUp.class);
                 LogIn.this.startActivity(moveToSignUp);
             }
         };
