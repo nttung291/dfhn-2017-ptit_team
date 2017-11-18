@@ -4,71 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.son.gdghack.Booking"
     android:background="@android:color/holo_red_light"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.son.gdghack.Booking">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="16dp"
+                    android:src="@drawable/ic_arrow_back_white" />
+
+                <TextView
+                    android:id="@+id/app_bar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Time"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/holo_red_light" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="30dp"
-        android:paddingLeft="40dp">
+        android:paddingLeft="40dp"
+        android:paddingTop="30dp">
+
         <TextView
             android:id="@+id/hello"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="monospace"
             android:text="Xin chào, Hoàng Anh Phạm"
             android:textColor="@color/white"
-            android:fontFamily="monospace"
-            android:textSize="15dp"/>
+            android:textSize="15dp" />
     </LinearLayout>
+
     <LinearLayout
-        android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingTop="20dp"
         android:weightSum="6">
 
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
-        <TextView
-            android:paddingTop="10dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:paddingTop="10dp"
             android:text="DATE"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
         <TextView
-            android:paddingTop="10dp"
             android:id="@+id/date"
-            android:layout_weight="2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:fontFamily="monospace"
+            android:paddingTop="10dp"
             android:text="1/1/2017"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
             <Button
                 android:id="@+id/btnEditDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="edit"
-                android:textColor="@android:color/holo_red_light"/>
+                android:textColor="@android:color/holo_red_light" />
         </LinearLayout>
+
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -80,45 +126,50 @@
         android:weightSum="6">
 
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
-        <TextView
-            android:paddingTop="10dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:paddingTop="10dp"
             android:text="TIME"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
         <TextView
-            android:paddingTop="10dp"
             android:id="@+id/time"
-            android:layout_weight="2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:fontFamily="monospace"
+            android:paddingTop="10dp"
             android:text="00:00:00"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
             <Button
                 android:id="@+id/btnEditTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="edit"
-                android:textColor="@android:color/holo_red_light"/>
+                android:textColor="@android:color/holo_red_light" />
         </LinearLayout>
+
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -127,88 +178,91 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="6"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:weightSum="6">
 
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
-        <TextView
-            android:paddingTop="10dp"
-            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:fontFamily="monospace"
+            android:paddingTop="10dp"
             android:text="NUMBER OF GUESTS"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/numberGuest"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
             android:text="1"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
-
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
     </LinearLayout>
+
     <Button
         android:id="@+id/btnContinue"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:textColor="@android:color/holo_red_light"
         android:background="@color/white"
-        android:text="CONTINUE"/>
+        android:gravity="center"
+        android:text="CONTINUE"
+        android:textColor="@android:color/holo_red_light" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="50dp"
-        android:paddingLeft="50dp">
+        android:paddingLeft="50dp"
+        android:paddingTop="50dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="PTIT_TEAM RES"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="15dp"/>
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Add: Km10, Nguyen Trai, Ha Dong, Ha Noi"
-            android:textStyle="italic"
             android:textColor="@color/white"
             android:textSize="15dp"
-            />
+            android:textStyle="italic" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Mob: 0972999596"
-            android:textStyle="italic"
             android:textColor="@color/white"
             android:textSize="15dp"
-            />
+            android:textStyle="italic" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Mail: ptit_team@gmail.com"
-            android:textStyle="italic"
             android:textColor="@color/white"
             android:textSize="15dp"
-            />
+            android:textStyle="italic" />
     </LinearLayout>
-
 
 
 </LinearLayout>

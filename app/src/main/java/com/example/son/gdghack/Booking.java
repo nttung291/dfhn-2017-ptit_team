@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -19,11 +20,20 @@ public class Booking extends AppCompatActivity {
     TextView txtDate, txtTime;
     Calendar cal;
     Date date, gio;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
+
+        setupUI();
+    }
+
+    private void setupUI() {
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         btnChangeDate = (Button) findViewById(R.id.btnEditDate);
         txtDate = (TextView) findViewById(R.id.date);
         btnChangeDate.setOnClickListener(showDatePicker);
@@ -48,7 +58,6 @@ public class Booking extends AppCompatActivity {
         //lấy giờ theo 24 để lập trình theo Tag
         dft = new SimpleDateFormat("HH:mm", Locale.getDefault());
         txtTime.setTag(dft.format(cal.getTime()));
-
     }
 
     // Sự kiện khi click vào nút changedate

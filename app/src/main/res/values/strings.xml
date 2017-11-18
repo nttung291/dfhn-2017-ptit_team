@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Restaurant</string>
+    <string name="table">Table</string>
     <color name="bg">#001a33</color>
     <color name="white">#ffffff</color>
     <color name="grey">#b3b3b3</color>
