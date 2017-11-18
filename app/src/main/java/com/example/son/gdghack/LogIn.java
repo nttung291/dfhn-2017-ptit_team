@@ -54,7 +54,6 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
-                            User.user.Id = user.getUid();
                             startActivity(new Intent(LogIn.this, Booking.class));
                         } else {
                             Toast.makeText(LogIn.this, "Authentication failed.",
