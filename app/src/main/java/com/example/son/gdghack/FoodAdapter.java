@@ -47,14 +47,13 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     public void onBindViewHolder(FoodViewHolder holder, int position) {
         /** Set Value*/
         final Food food = foodList.get(position);
-        holder.fname.setText(food.getFname());
-        holder.price.setText(food.getPrice());
+        holder.fname.setText(food.getname());
+        holder.price.setText(food.getPrice().toString());
     }
 
     @Override
     public int getItemCount() {
         return foodList.size();
-
     }
 
 
