@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.son.gdghack.adapters.RVTableAdapter;
 import com.example.son.gdghack.models.Table;
@@ -32,6 +33,7 @@ public class BookTable extends AppCompatActivity {
     private List<Table> tables;
     private RecyclerView rvTable;
     private RVTableAdapter rvTableAdapter;
+    private TextView tvDone;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -86,6 +88,17 @@ public class BookTable extends AppCompatActivity {
         rvTableAdapter = new RVTableAdapter(tables);
         rvTable.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         rvTable.setAdapter(rvTableAdapter);
+        tvDone = findViewById(R.id.tv_done);
+        tvDone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (RVTableAdapter.preToggle == null) {
+                    Toast.makeText(BookTable.this, "Choose one table", Toast.LENGTH_SHORT).show();
+                } else {
+                    showDialog();
+                }
+            }
+        });
 
         setSupportActionBar(mToolbar);
         tvAppBarTitle.setText(getString(R.string.table));
@@ -95,5 +108,10 @@ public class BookTable extends AppCompatActivity {
                 BookTable.super.onBackPressed();
             }
         });
+    }
+
+    private void showDialog() {
+        CustomDialogClass cdd = new CustomDialogClass(BookTable.this);
+        cdd.show();
     }
 }

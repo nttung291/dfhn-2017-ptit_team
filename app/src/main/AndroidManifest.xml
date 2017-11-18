@@ -22,6 +22,7 @@
         <activity android:name=".DeliveryNow"></activity>
         <activity android:name=".BookTable"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".PaymentActivity"></activity>
     </application>
 
 </manifest>
