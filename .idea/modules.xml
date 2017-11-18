@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GDGHack.iml" filepath="$PROJECT_DIR$/GDGHack.iml" />
+      <module fileurl="file://E:\Android\dfhn-2017-ptit_team\GDGHack.iml" filepath="E:\Android\dfhn-2017-ptit_team\GDGHack.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Android\dfhn-2017-ptit_team\app\app.iml" filepath="E:\Android\dfhn-2017-ptit_team\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dfhn-2017-ptit_team.iml" filepath="$PROJECT_DIR$/dfhn-2017-ptit_team.iml" />
     </modules>
   </component>
 </project>

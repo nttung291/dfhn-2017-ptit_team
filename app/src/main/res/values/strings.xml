@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">GDGHack</string>
+    <string name="app_name">Restaurant</string>
+    <color name="bg">#001a33</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#b3b3b3</color>
+    <color name="pre">#62B2FF</color>
+    <color name="vice">#FF756D</color>
+    <color name="lead">#FF7A6C</color>
+    <color name="mem">#56C1FF</color>
+    <color name="redlight">#ff4d4d</color>
+    <color name="orglight">#ff8533</color>
 </resources>
