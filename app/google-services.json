@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "26835705801",
+    "firebase_url": "https://ptit-team-restaurant-booking.firebaseio.com",
+    "project_id": "ptit-team-restaurant-booking",
+    "storage_bucket": "ptit-team-restaurant-booking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26835705801:android:3278454b67aa0f05",
+        "android_client_info": {
+          "package_name": "com.example.son.gdghack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26835705801-5ae7l497fugv617b1145338g1ak25apu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.son.gdghack",
+            "certificate_hash": "d64c8119d6e31bc92e47c9ad55b0c24678464f93"
+          }
+        },
+        {
+          "client_id": "26835705801-hasgn943f9song078sh9i9rbdk9d2feq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnhLijz6uu9zY8M5_rM0LyezfTZN5IXGw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26835705801-hasgn943f9song078sh9i9rbdk9d2feq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
