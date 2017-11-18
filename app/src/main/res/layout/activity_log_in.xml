@@ -77,7 +77,9 @@
                 android:layout_height="45dp"
                 android:fontFamily="monospace"
                 android:hint="Name"
+                android:maxLines="1"
                 android:paddingLeft="20dp"
+                android:singleLine="true"
                 android:textColor="#fff"
                 android:textColorHint="#fff"
                 android:textSize="16dp" />
@@ -103,7 +105,10 @@
                 android:layout_height="45dp"
                 android:fontFamily="monospace"
                 android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
                 android:paddingLeft="20dp"
+                android:singleLine="true"
                 android:textColor="#fff"
                 android:textColorHint="#fff"
                 android:textSize="16dp" />
@@ -123,6 +128,7 @@
             android:layout_height="45dp"
             android:backgroundTint="#fff"
             android:fontFamily="sans-serif"
+            android:onClick="onClick"
             android:text="LOGIN"
             android:textColor="@android:color/holo_red_light"
             android:textStyle="bold" />
